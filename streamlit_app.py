@@ -85,4 +85,4 @@ if prompt:
     st.session_state.messages.append({"role": "assistant", "content": generated_code})
     
     # Rerun to update chat
-    st.experimental_rerun()
+    st.rerun()
