@@ -3,7 +3,7 @@ import openai
 import os
 
 # Initialize the OpenAI API client
-openai.api_key = os.getenv('OPENAI')
+openai.api_key = st.secrets["OPENAI"]
 
 def generate_code_chat(messages):
     """
