@@ -16,7 +16,7 @@ def generate_code_chat(messages):
     str: The generated code.
     """
     response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
+        model=st.secrets["model"],
         messages=messages,
         max_tokens=2048,
         temperature=0.5
