@@ -2,7 +2,7 @@ import streamlit as st
 import openai
 
 # Initialize the OpenAI API client
-openai.api_key = ${{ secrets.ENV_SECRET }}
+openai.api_key = ${{ secrets.OPENAI }}
 
 def generate_code_chat(messages):
     """
