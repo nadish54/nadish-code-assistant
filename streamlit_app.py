@@ -39,7 +39,7 @@ with st.sidebar:
     if st.button("Clear Chat"):
         st.session_state["messages"] = [
             {"role": "system", "content": f"You are an expert {language} programmer. Provide detailed, well-commented, and efficient code solutions. Always include necessary imports and explanations for complex sections."},
-            {"role": "assistant", "content": f"I am your expert {language} coding assistant. How can I help you with Python coding today?"}
+            {"role": "assistant", "content": f"I am your expert {language} coding assistant. How can I help you with {language} coding today?"}
         ]
         st.rerun()
 
@@ -47,14 +47,14 @@ with st.sidebar:
 if "messages" not in st.session_state:
     st.session_state["messages"] = [
         {"role": "system", "content": f"You are an expert {language} programmer. Provide detailed, well-commented, and efficient code solutions. Always include necessary imports and explanations for complex sections."},
-            {"role": "assistant", "content": f"I am your expert {language} coding assistant. How can I help you with Python coding today?"}
+            {"role": "assistant", "content": f"I am your expert {language} coding assistant. How can I help you with {language} coding today?"}
     ]
 else:
     # Check if the language has changed
     if st.session_state.get("selected_language") != language:
         st.session_state["messages"] = [
             {"role": "system", "content": f"You are an expert {language} programmer. Provide detailed, well-commented, and efficient code solutions. Always include necessary imports and explanations for complex sections."},
-            {"role": "assistant", "content": f"I am your expert {language} coding assistant. How can I help you with Python coding today?"}
+            {"role": "assistant", "content": f"I am your expert {language} coding assistant. How can I help you with {language} coding today?"}
         ]
     st.session_state["selected_language"] = language
 
